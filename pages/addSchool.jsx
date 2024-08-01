@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import 'tailwindcss/tailwind.css';
+import Header from './Header';
 
 export default function ShowSchools() {
   const [schools, setSchools] = useState([]);
@@ -41,23 +42,11 @@ export default function ShowSchools() {
   };
 
   return (
-    <div className="container mx-auto px-4">
-      <h1 className="text-4xl font-bold text-center mt-8">School Search</h1>
-      <p className="text-center mb-8">Find the right school for your child.</p>
-      <div className="flex justify-center mb-4">
-        <input
-          type="text"
-          placeholder="School Name..."
-          className="p-2 border border-gray-300 rounded-l"
-        />
-        <button className="p-2 bg-green-500 text-white rounded-r">Search</button>
-      </div>
-      <div className="flex justify-center mb-8">
-        <button className="bg-green-500 text-white px-4 py-2 mx-2 rounded">Choose City</button>
-        <button className="bg-green-500 text-white px-4 py-2 mx-2 rounded">Choose Board</button>
-        <button className="bg-green-500 text-white px-4 py-2 mx-2 rounded">Choose Type</button>
-        <button className="bg-green-500 text-white px-4 py-2 mx-2 rounded">Hostel Facility</button>
-      </div>
+    <div>        <Header />
+      <h1 className="text-4xl font-bold text-center mt-8" style={{ fontSize: '50px', fontFamily: 'Open Sans' }}>ADD YOUR SCHOOL HERE</h1>
+      <section className="section">
+      <div className="container">
+      <div className="box">
 
       <form onSubmit={handleSubmit(onSubmit)} className="mb-8">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -98,8 +87,11 @@ export default function ShowSchools() {
         </div>
         <button type="submit" className="bg-green-500 text-white px-4 py-2 mt-4 rounded">Add School</button>
       </form>
+        </div>
+        </div>
+        </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {schools.map(school => (
           <div key={school.id} className="school-card border rounded-lg overflow-hidden shadow-lg">
             <img src={school.image} alt={school.name} className="w-full h-48 object-cover" />
@@ -114,7 +106,8 @@ export default function ShowSchools() {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
+
   );
 }
