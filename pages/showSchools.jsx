@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "tailwindcss/tailwind.css";
-import Header from "./Header"; // Adjust the import path based on your project structure
+import Header from "./Header"; 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function ShowSchools() {

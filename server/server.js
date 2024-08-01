@@ -33,12 +33,10 @@ db.connect((err) => {
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     const uploadPath = path.join(__dirname, '../public/schoolImages');
-    console.log('Upload path:', uploadPath); // Log upload path
     cb(null, uploadPath);
   },
   filename: (req, file, cb) => {
     const filename = Date.now() + path.extname(file.originalname);
-    console.log('Generated filename:', filename); // Log generated filename
     cb(null, filename);
   },
 });

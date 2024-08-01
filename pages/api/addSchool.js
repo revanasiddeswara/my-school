@@ -7,7 +7,7 @@ export default async (req, res) => {
     const connection = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
-      password: 'yourpassword',
+      password: 'Siddu12345',
       database: 'schoolDB'
     });
 

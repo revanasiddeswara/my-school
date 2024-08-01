@@ -13,8 +13,7 @@ export default function Home() {
       </h1>
       <section className="section">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="box p-4 sm:p-6 lg:p-8"></div>
-
+          <div className="box p-4 sm:p-6 lg:p-8">
           <nav>
             <ul>
               <li>
@@ -25,6 +24,7 @@ export default function Home() {
               </li>
             </ul>
           </nav>
+        </div>
         </div>
       </section>
     </div>
