@@ -42,72 +42,54 @@ export default function ShowSchools() {
   };
 
   return (
-    <div>        <Header />
-      <h1 className="text-4xl font-bold text-center mt-8" style={{ fontSize: '50px', fontFamily: 'Open Sans' }}>ADD YOUR SCHOOL HERE</h1>
+    <div>
+      <Header />
+      <h1 className="text-4xl font-bold text-center mt-8" style={{ fontFamily: 'Open Sans' }}>ADD YOUR SCHOOL HERE</h1>
       <section className="section">
-      <div className="container">
-      <div className="box">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="box p-4 sm:p-6 lg:p-8">
+            <form onSubmit={handleSubmit(onSubmit)} className="mb-8 space-y-4">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                <div>
+                  <input {...register('name', { required: true })} placeholder="School Name" className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  {errors.name && <p className="text-red-500 mt-2">Name is required.</p>}
+                </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="mb-8">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div>
-            <input {...register('name', { required: true })} placeholder="School Name" className="w-full p-2 border border-gray-300 rounded" />
-            {errors.name && <p className="text-red-500">Name is required.</p>}
-          </div>
+                <div>
+                  <input {...register('address', { required: true })} placeholder="Address" className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  {errors.address && <p className="text-red-500 mt-2">Address is required.</p>}
+                </div>
 
-          <div>
-            <input {...register('address', { required: true })} placeholder="Address" className="w-full p-2 border border-gray-300 rounded" />
-            {errors.address && <p className="text-red-500">Address is required.</p>}
-          </div>
+                <div>
+                  <input {...register('city', { required: true })} placeholder="City" className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  {errors.city && <p className="text-red-500 mt-2">City is required.</p>}
+                </div>
 
-          <div>
-            <input {...register('city', { required: true })} placeholder="City" className="w-full p-2 border border-gray-300 rounded" />
-            {errors.city && <p className="text-red-500">City is required.</p>}
-          </div>
+                <div>
+                  <input {...register('state', { required: true })} placeholder="State" className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  {errors.state && <p className="text-red-500 mt-2">State is required.</p>}
+                </div>
 
-          <div>
-            <input {...register('state', { required: true })} placeholder="State" className="w-full p-2 border border-gray-300 rounded" />
-            {errors.state && <p className="text-red-500">State is required.</p>}
-          </div>
+                <div>
+                  <input {...register('contact', { required: true })} placeholder="Contact" type="tel" className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  {errors.contact && <p className="text-red-500 mt-2">Contact is required.</p>}
+                </div>
 
-          <div>
-            <input {...register('contact', { required: true })} placeholder="Contact" type="tel" className="w-full p-2 border border-gray-300 rounded" />
-            {errors.contact && <p className="text-red-500">Contact is required.</p>}
-          </div>
+                <div>
+                  <input {...register('email_id', { required: true, pattern: /^\S+@\S+$/i })} placeholder="Email" type="email" className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  {errors.email_id && <p className="text-red-500 mt-2">Valid email is required.</p>}
+                </div>
 
-          <div>
-            <input {...register('email_id', { required: true, pattern: /^\S+@\S+$/i })} placeholder="Email" type="email" className="w-full p-2 border border-gray-300 rounded" />
-            {errors.email_id && <p className="text-red-500">Valid email is required.</p>}
-          </div>
-
-          <div>
-            <input {...register('image', { required: true })} type="file" className="w-full p-2 border border-gray-300 rounded" />
-            {errors.image && <p className="text-red-500">Image is required.</p>}
-          </div>
-        </div>
-        <button type="submit" className="bg-green-500 text-white px-4 py-2 mt-4 rounded">Add School</button>
-      </form>
-        </div>
-        </div>
-        </section>
-
-      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {schools.map(school => (
-          <div key={school.id} className="school-card border rounded-lg overflow-hidden shadow-lg">
-            <img src={school.image} alt={school.name} className="w-full h-48 object-cover" />
-            <div className="p-4">
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">{school.city}</span>
-                <span className="text-sm text-gray-600">{school.board}</span>
+                <div>
+                  <input {...register('image', { required: true })} type="file" className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  {errors.image && <p className="text-red-500 mt-2">Image is required.</p>}
+                </div>
               </div>
-              <h2 className="text-xl font-semibold mt-2">{school.name}</h2>
-              <p className="text-gray-600">{school.address}</p>
-              <button className="bg-green-500 text-white px-4 py-2 mt-4 rounded">Apply Now</button>
-            </div>
+              <button type="submit" className="bg-green-500 text-white px-6 py-3 mt-4 rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">Add School</button>
+            </form>
           </div>
-        ))}
-      </div> */}
+        </div>
+      </section>
     </div>
-
   );
 }

@@ -43,7 +43,7 @@ export default function ShowSchools() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <button className=" bg-green-500 text-white rounded-r submit-btn">
+          <button className=" submit-btn">
             Search
           </button>
         </div>

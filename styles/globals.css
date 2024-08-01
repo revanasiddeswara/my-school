@@ -31,7 +31,7 @@
 .box {
   background-color: #ffffff;
   padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 30px 50px 0 rgba(1, 1, 1, .18) !important;
   border-radius: 8px;
 }
 
@@ -145,7 +145,33 @@
   transition: width 0.4s ease-in-out;
   margin: 0.2%;
 }
-.submit-btn {
+.submit-btn{
   padding: 10px !important;
   font-family: Open Sans;
+  color: #fff;
+  background-color: #5cb85c !important;
+  border-color: #4cae4c !important;
+  font-size: 16px;
+  line-height: inherit;
+  -webkit-appearance: button;
+}
+.box {
+  background-color: #ffffff;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+  
+  .box {
+    padding: 1rem;
+  }
+  
+  .grid-cols-1 {
+    grid-template-columns: 1fr;
+  }
 }
