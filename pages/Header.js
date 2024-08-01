@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'tailwindcss/tailwind.css';
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube, FaBars, FaTimes } from 'react-icons/fa';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
