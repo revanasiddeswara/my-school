@@ -16,18 +16,117 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Existing Styles */
+.section {
+  padding: 4rem 0;
+  background-color: #f9f9f9;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10rem;
+}
+
+.box {
+  background-color: #ffffff;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.school-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.school-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 250px;
+  background-color: #ffffff;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.school-card img {
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  
+}
+
+.school-card:hover img {
+  transform: scale(1.2);
+  border-radius: 15px 15px 0 0;
+  transition: all 0.4s ease-in;
+  overflow: hidden;
+}
+
+.plus-icon {
+  width: 40px !important;
+    height: 40px !important;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px 15px 0 0;
+}
+
+.plus-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.school-card .p-4 {
+  padding: 1rem;
+  text-align: left;
+  height: 180px;
+  padding: 3rem 2rem;
+}
+
+.school-card h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  height: 3em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.5em;
+  overflow: hidden;
+}
+
+.school-card p {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #777;
+}
+
+.school-card .apply-now-btn {
+  background-color: #28a745;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.school-card .apply-now-btn:hover {
+  background-color: #218838;
 }
