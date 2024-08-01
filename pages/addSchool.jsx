@@ -35,7 +35,7 @@ export default function ShowSchools() {
       const response = await axios.post('http://localhost:5000/api/addSchool', formData);
       alert(response.data.message);
       // Optionally refetch schools after adding a new one
-      fetchSchools();
+    //   fetchSchools();
     } catch (error) {
       console.error(error);
     }
