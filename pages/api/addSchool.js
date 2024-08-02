@@ -9,10 +9,7 @@ const addSchool = async (req, res) => {
     const { name, address, city, state, contact, image, email_id } = req.body;
 
     const connection = await mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: 'Siddu12345',
-        database: 'schoolDB',
+      uri: process.env.DATABASE_URL
     });
 
     try {
