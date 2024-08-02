@@ -70,11 +70,11 @@ const Header = () => {
                 className="h-16"
               />
             </Link>
-            <div className="md:hidden">
-              <button onClick={toggleMenu} className="text-2xl ml-16">
-                {isOpen ? <FaTimes /> : <FaBars />}
-              </button>
-            </div>
+          </div>
+          <div className="md:hidden ml-auto">
+            <button onClick={toggleMenu} className="text-2xl">
+              {isOpen ? <FaTimes /> : <FaBars />}
+            </button>
           </div>
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex md:flex-row md:space-x-6 md:ml-auto text-sm mt-4 md:mt-0">
