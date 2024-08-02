@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
-import 'tailwindcss/tailwind.css';
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube, FaBars, FaTimes } from 'react-icons/fa';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import Image from 'next/image';
+import React, { useState } from "react";
+import "tailwindcss/tailwind.css";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaInstagram,
+  FaYoutube,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import Image from "next/image";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +21,11 @@ const Header = () => {
   return (
     <header
       className="text-white py-2"
-      style={{ backgroundImage: "url('https://uniformapp.in/images/bgnav.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+      style={{
+        backgroundImage: "url('https://uniformapp.in/images/bgnav.svg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
       <div className="container mx-auto">
         {/* Top Section - Email and Social Icons */}
@@ -31,10 +42,18 @@ const Header = () => {
             </p>
           </div>
           <div className="flex space-x-4 text-lg">
-            <a href="#" className="hover:text-blue-300"><FaFacebookF /></a>
-            <a href="#" className="hover:text-blue-300"><FaLinkedinIn /></a>
-            <a href="#" className="hover:text-pink-300"><FaInstagram /></a>
-            <a href="#" className="hover:text-red-500"><FaYoutube /></a>
+            <a href="#" className="hover:text-blue-300">
+              <FaFacebookF />
+            </a>
+            <a href="#" className="hover:text-blue-300">
+              <FaLinkedinIn />
+            </a>
+            <a href="#" className="hover:text-pink-300">
+              <FaInstagram />
+            </a>
+            <a href="#" className="hover:text-red-500">
+              <FaYoutube />
+            </a>
           </div>
         </div>
 
@@ -44,8 +63,8 @@ const Header = () => {
             <Image
               src="https://uniformapp.in/images/small_logo.png"
               alt="Logo"
-              width={64} // Adjust the width as needed
-              height={64} // Adjust the height as needed
+              width={100}
+              height={50}
               className="h-16"
             />
             <div className="md:hidden">
@@ -56,25 +75,59 @@ const Header = () => {
           </div>
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex md:flex-row md:space-x-6 md:ml-auto text-sm mt-4 md:mt-0">
-            <a href="#" className="hover:underline font-bold">Common Admissions</a>
-            <a href="#" className="hover:underline font-bold">School Portal</a>
-            <a href="#" className="hover:underline font-bold">Find Schools</a>
-            <a href="#" className="hover:underline font-bold">Blog</a>
-            <a href="#" className="hover:underline font-bold">Log In</a>
-            <a href="#" className="bg-green-500 px-4 py-2 rounded text-white hover:bg-green-600 font-bold">Sign Up</a>
+            <a href="#" className="hover:underline font-bold">
+              Common Admissions
+            </a>
+            <a href="#" className="hover:underline font-bold">
+              School Portal
+            </a>
+            <a href="#" className="hover:underline font-bold">
+              Find Schools
+            </a>
+            <a href="#" className="hover:underline font-bold">
+              Blog
+            </a>
+            <a href="#" className="hover:underline font-bold">
+              Log In
+            </a>
+            <a
+              href="#"
+              className="bg-green-500 px-4 py-2 rounded text-white hover:bg-green-600 font-bold"
+            >
+              Sign Up
+            </a>
           </nav>
         </div>
 
         {/* Mobile Navigation Links */}
-        <nav className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96' : 'max-h-0'}`}>
+        <nav
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isOpen ? "max-h-96" : "max-h-0"
+          }`}
+        >
           <div className="p-6">
             <div className="flex flex-col space-y-4">
-              <a href="#" className="hover:underline font-bold text-white">Common Admissions</a>
-              <a href="#" className="hover:underline font-bold text-white">School Portal</a>
-              <a href="#" className="hover:underline font-bold text-white">Find Schools</a>
-              <a href="#" className="hover:underline font-bold text-white">Blog</a>
-              <a href="#" className="hover:underline font-bold text-white">Log In</a>
-              <a href="#" className="bg-green-500 px-4 py-2 rounded text-white hover:bg-green-600 font-bold text-center">Sign Up</a>
+              <a href="#" className="hover:underline font-bold text-white">
+                Common Admissions
+              </a>
+              <a href="#" className="hover:underline font-bold text-white">
+                School Portal
+              </a>
+              <a href="#" className="hover:underline font-bold text-white">
+                Find Schools
+              </a>
+              <a href="#" className="hover:underline font-bold text-white">
+                Blog
+              </a>
+              <a href="#" className="hover:underline font-bold text-white">
+                Log In
+              </a>
+              <a
+                href="#"
+                className="bg-green-500 px-4 py-2 rounded text-white hover:bg-green-600 font-bold text-center"
+              >
+                Sign Up
+              </a>
             </div>
           </div>
         </nav>
