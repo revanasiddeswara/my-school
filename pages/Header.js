@@ -110,21 +110,15 @@ const Header = () => {
         >
           <div className="p-6">
             <div className="flex flex-col space-y-4">
-              <a href="#" className="hover:underline font-bold text-white">
-                Common Admissions
-              </a>
-              <a href="#" className="hover:underline font-bold text-white">
-                School Portal
-              </a>
-              <a href="#" className="hover:underline font-bold text-white">
-                Find Schools
-              </a>
-              <a href="#" className="hover:underline font-bold text-white">
-                Blog
-              </a>
-              <a href="#" className="hover:underline font-bold text-white">
-                Log In
-              </a>
+            <a href="/" className="hover:underline font-bold">
+              HOME
+            </a>
+            <a href="/showSchools" className="hover:underline font-bold">
+              Show School
+            </a>
+            <a href="/addSchool" className="hover:underline font-bold">
+              Add Schools
+            </a>
               <a
                 href="#"
                 className="bg-green-500 px-4 py-2 rounded text-white hover:bg-green-600 font-bold text-center"
