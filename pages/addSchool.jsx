@@ -6,18 +6,20 @@ import Header from './Header';
 
 export default function ShowSchools() {
   const [schools, setSchools] = useState([]);
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
+  // Fetch schools when component mounts or when the button is clicked
+  const fetchSchools = async () => {
+    try {
+      const response = await axios.get('http://localhost:5000/api/getSchools');
+      setSchools(response.data);
+    } catch (error) {
+      console.error('Error fetching schools:', error);
+    }
+  };
+
+  // Call fetchSchools when component mounts
   useEffect(() => {
-    const fetchSchools = async () => {
-      try {
-        const response = await axios.get('http://localhost:5000/api/getSchools');
-        setSchools(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
     fetchSchools();
   }, []);
 
@@ -32,10 +34,15 @@ export default function ShowSchools() {
     formData.append('image', data.image[0]);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/addSchool', formData);
+      const response = await axios.post('http://localhost:5000/api/addSchool', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
       alert(response.data.message);
+      reset(); // Reset form fields after successful submission
     } catch (error) {
-      console.error(error);
+      console.error('Error submitting form:', error.response ? error.response.data : error.message);
     }
   };
 
@@ -85,7 +92,9 @@ export default function ShowSchools() {
               </div>
               <button type="submit" className="bg-green-500 text-white px-6 py-3 mt-4 rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">Add School</button>
             </form>
+            {/* <button onClick={fetchSchools} className="bg-blue-500 text-white px-6 py-3 mt-4 rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Show Schools</button> */}
           </div>
+        
         </div>
       </section>
     </div>

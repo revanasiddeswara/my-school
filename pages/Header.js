@@ -75,21 +75,21 @@ const Header = () => {
           </div>
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex md:flex-row md:space-x-6 md:ml-auto text-sm mt-4 md:mt-0">
-            <a href="#" className="hover:underline font-bold">
-              Common Admissions
+            <a href="/" className="hover:underline font-bold">
+              HOME
             </a>
-            <a href="#" className="hover:underline font-bold">
-              School Portal
+            <a href="/showSchools" className="hover:underline font-bold">
+              Show School
             </a>
-            <a href="#" className="hover:underline font-bold">
-              Find Schools
+            <a href="/addSchool" className="hover:underline font-bold">
+              Add Schools
             </a>
-            <a href="#" className="hover:underline font-bold">
+            {/* <a href="#" className="hover:underline font-bold">
               Blog
             </a>
             <a href="#" className="hover:underline font-bold">
               Log In
-            </a>
+            </a> */}
             <a
               href="#"
               className="bg-green-500 px-4 py-2 rounded text-white hover:bg-green-600 font-bold"
