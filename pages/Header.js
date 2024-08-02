@@ -10,10 +10,10 @@ import {
 } from "react-icons/fa";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -35,32 +35,32 @@ const Header = () => {
               <i className="fa fa-envelope"></i>
               <span>
                 {" "}
-                <a href="mailto:mail@uniformapp.in" className="hover:underline">
+                <Link href="mailto:mail@uniformapp.in" className="hover:underline">
                   mail@uniformapp.in
-                </a>
+                </Link>
               </span>
             </p>
           </div>
           <div className="flex space-x-4 text-lg">
-            <a href="#" className="hover:text-blue-300">
+            <Link href="#" className="hover:text-blue-300">
               <FaFacebookF />
-            </a>
-            <a href="#" className="hover:text-blue-300">
+            </Link>
+            <Link href="#" className="hover:text-blue-300">
               <FaLinkedinIn />
-            </a>
-            <a href="#" className="hover:text-pink-300">
+            </Link>
+            <Link href="#" className="hover:text-pink-300">
               <FaInstagram />
-            </a>
-            <a href="#" className="hover:text-red-500">
+            </Link>
+            <Link href="#" className="hover:text-red-500">
               <FaYoutube />
-            </a>
+            </Link>
           </div>
         </div>
 
         {/* Bottom Section - Logo and Navigation Links */}
         <div className="flex justify-between items-center py-2">
           <div className="flex items-center space-x-3">
-            <a href="/">
+            <Link href="/">
               {" "}
               <Image
                 src="https://uniformapp.in/images/small_logo.png"
@@ -69,7 +69,7 @@ const Header = () => {
                 height={50}
                 className="h-16"
               />
-            </a>
+            </Link>
             <div className="md:hidden">
               <button onClick={toggleMenu} className="text-2xl ml-16">
                 {isOpen ? <FaTimes /> : <FaBars />}
@@ -78,27 +78,21 @@ const Header = () => {
           </div>
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex md:flex-row md:space-x-6 md:ml-auto text-sm mt-4 md:mt-0">
-            <a href="/" className="hover:underline font-bold">
+            <Link href="/" className="hover:underline font-bold">
               HOME
-            </a>
-            <a href="/showSchools" className="hover:underline font-bold">
+            </Link>
+            <Link href="/showSchools" className="hover:underline font-bold">
               Show School
-            </a>
-            <a href="/addSchool" className="hover:underline font-bold">
+            </Link>
+            <Link href="/addSchool" className="hover:underline font-bold">
               Add Schools
-            </a>
-            {/* <a href="#" className="hover:underline font-bold">
-              Blog
-            </a>
-            <a href="#" className="hover:underline font-bold">
-              Log In
-            </a> */}
-            <a
+            </Link>
+            <Link
               href="#"
               className="bg-green-500 px-4 py-2 rounded text-white hover:bg-green-600 font-bold"
             >
               Sign Up
-            </a>
+            </Link>
           </nav>
         </div>
 
@@ -110,21 +104,21 @@ const Header = () => {
         >
           <div className="p-6">
             <div className="flex flex-col space-y-4">
-            <a href="/" className="hover:underline font-bold">
+            <Link href="/" className="hover:underline font-bold">
               HOME
-            </a>
-            <a href="/showSchools" className="hover:underline font-bold">
+            </Link>
+            <Link href="/showSchools" className="hover:underline font-bold">
               Show School
-            </a>
-            <a href="/addSchool" className="hover:underline font-bold">
+            </Link>
+            <Link href="/addSchool" className="hover:underline font-bold">
               Add Schools
-            </a>
-              <a
+            </Link>
+              <Link
                 href="#"
                 className="bg-green-500 px-4 py-2 rounded text-white hover:bg-green-600 font-bold text-center"
               >
                 Sign Up
-              </a>
+              </Link>
             </div>
           </div>
         </nav>
