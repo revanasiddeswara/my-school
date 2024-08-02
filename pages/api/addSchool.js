@@ -3,7 +3,8 @@ import { config } from 'dotenv';
 
 // Load environment variables
 config();
-export default async (req, res) => {
+
+const addSchool = async (req, res) => {
   if (req.method === 'POST') {
     const { name, address, city, state, contact, image, email_id } = req.body;
 
@@ -28,3 +29,5 @@ export default async (req, res) => {
     res.status(405).json({ message: 'Method not allowed' });
   }
 };
+
+export default addSchool;

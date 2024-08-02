@@ -1,7 +1,6 @@
-// components/Footer.js
-
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -18,7 +17,7 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter email here.."
-                className="w-full p-2 rounded-l-lg  text-black  bg-transparent email-field"
+                className="w-full p-2 rounded-l-lg text-black bg-transparent email-field"
               />
               <button className="bg-teal-500 p-2 rounded-r-lg">
                 <i className="fa fa-paper-plane"></i>
@@ -49,11 +48,11 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center mt-8">
-          <img
+          <Image
             src="https://uniformapp.in/images/small_logo.png"
             alt="UniForm Logo"
-            width={100}
-            height={50}
+            width={100} // Adjust width as needed
+            height={50} // Adjust height as needed
             className="mx-auto mb-2 object-contain"
           />
           <p className="text-xs">Copyright : Uniform Ventures Pvt. Ltd.</p>

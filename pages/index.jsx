@@ -13,7 +13,7 @@ export default function Home() {
               Welcome to School Management
             </h1>
             <p className="text-center text-gray-600 mb-8">
-              Manage your school's information easily.
+              Manage your school&apos;s information easily.
             </p>
             <nav className="flex justify-center space-x-4">
               <Link href="/addSchool" legacyBehavior>
@@ -30,7 +30,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

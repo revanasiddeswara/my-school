@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import 'tailwindcss/tailwind.css';
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube, FaBars, FaTimes } from 'react-icons/fa';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Image from 'next/image';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,12 +41,17 @@ const Header = () => {
         {/* Bottom Section - Logo and Navigation Links */}
         <div className="flex justify-between items-center py-2">
           <div className="flex items-center space-x-3">
-            <img src="https://uniformapp.in/images/small_logo.png" alt="Logo" className="h-16" />
+            <Image
+              src="https://uniformapp.in/images/small_logo.png"
+              alt="Logo"
+              width={64} // Adjust the width as needed
+              height={64} // Adjust the height as needed
+              className="h-16"
+            />
             <div className="md:hidden">
               <button onClick={toggleMenu} className="text-2xl ml-16">
                 {isOpen ? <FaTimes /> : <FaBars />}
               </button>
-              
             </div>
           </div>
           {/* Desktop Navigation Links */}
