@@ -3,7 +3,7 @@ import axios from "axios";
 import Image from "next/image";
 import "tailwindcss/tailwind.css";
 import Header from "./Header";
-import Footer from "./Footer";
+import Footer from "./footer";
 
 export default function ShowSchools() {
   const [schools, setSchools] = useState([]);
