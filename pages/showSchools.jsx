@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Image from "next/image";
 import "tailwindcss/tailwind.css";
 import Header from "./header";
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -57,9 +58,21 @@ export default function ShowSchools() {
                 filteredSchools.map((school) => (
                   <div key={school.id} className="school-card">
                     <div className="relative">
-                      <img src={school.image} alt={school.name} className="rounded-t-lg" />
+                      <Image 
+                        src={school.image} 
+                        alt={school.name} 
+                        layout="responsive" 
+                        width={500} 
+                        height={300} 
+                        className="rounded-t-lg" 
+                      />
                       <div className="absolute top-2 right-2 p-0 rounded-full shadow-lg plus-icon">
-                        <img src="https://uniformapp.in/images/plus.svg" alt="Plus Icon" className="w-8 h-8" />
+                        <Image 
+                          src="https://uniformapp.in/images/plus.svg" 
+                          alt="Plus Icon" 
+                          width={32} 
+                          height={32} 
+                        />
                       </div>
                     </div>
                     <div className="p-4">
