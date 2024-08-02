@@ -3,8 +3,7 @@ import axios from "axios";
 import Image from "next/image";
 import "tailwindcss/tailwind.css";
 import Header from "./Header";
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import Footer from "./footer";
+import Footer from "./Footer";
 
 export default function ShowSchools() {
   const [schools, setSchools] = useState([]);
@@ -13,9 +12,7 @@ export default function ShowSchools() {
   useEffect(() => {
     const fetchSchools = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:5000/api/getSchools"
-        );
+        const response = await axios.get("/api/getSchools"); // Use relative URL
         setSchools(response.data);
       } catch (error) {
         console.error(error);
@@ -93,7 +90,7 @@ export default function ShowSchools() {
           </div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

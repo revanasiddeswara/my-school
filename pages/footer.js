@@ -51,8 +51,8 @@ const Footer = () => {
           <Image
             src="https://uniformapp.in/images/small_logo.png"
             alt="UniForm Logo"
-            width={100} // Adjust width as needed
-            height={50} // Adjust height as needed
+            width={100}
+            height={50} 
             className="mx-auto mb-2 object-contain"
           />
           <p className="text-xs">Copyright : Uniform Ventures Pvt. Ltd.</p>
