@@ -11,7 +11,7 @@ export default function ShowSchools() {
   useEffect(() => {
     const fetchSchools = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/getSchools');
+        const response = await axios.get('/api/getSchools');
         setSchools(response.data);
       } catch (error) {
         console.error(error);
@@ -32,7 +32,11 @@ export default function ShowSchools() {
     formData.append('image', data.image[0]);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/addSchool', formData);
+      const response = await axios.post('/api/addSchool', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
       alert(response.data.message);
     } catch (error) {
       console.error(error);
