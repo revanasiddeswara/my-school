@@ -4,9 +4,6 @@ const bodyParser = require('body-parser');
 const multer = require('multer');
 const path = require('path');
 const cors = require('cors');
-const dotenv = require('dotenv');
-
-dotenv.config(); // Load environment variables
 
 const app = express();
 const port = 5000;
@@ -18,7 +15,10 @@ app.use('/schoolImages', express.static(path.join(__dirname, '../public/schoolIm
 
 // Database connection
 const db = mysql.createConnection({
-  uri: process.env.DATABASE_URL
+  host: 'localhost',
+  user: 'root',
+  password: 'Siddu12345',
+  database: 'schoolDB',
 });
 
 db.connect((err) => {
