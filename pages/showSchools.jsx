@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "tailwindcss/tailwind.css";
-import Header from "./Header";
+import Header from "./header";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Footer from "./footer";
 
