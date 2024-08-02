@@ -12,7 +12,7 @@ export default function ShowSchools() {
   useEffect(() => {
     const fetchSchools = async () => {
       try {
-        const response = await axios.get("/api/getSchools"); // Use relative URL
+        const response = await axios.get("http://127.0.0.1:5000//api/getSchools"); 
         setSchools(response.data);
       } catch (error) {
         console.error(error);
