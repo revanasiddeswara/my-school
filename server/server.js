@@ -1,4 +1,3 @@
-const { config } =require( 'dotenv');
 const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
@@ -9,8 +8,6 @@ const cors = require('cors');
 const app = express();
 const port = 5000;
 
-// Load environment variables
-config();
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
@@ -18,10 +15,10 @@ app.use('/schoolImages', express.static(path.join(__dirname, '../public/schoolIm
 
 // Database connection
 const db = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
+  host: 'localhost',
+  user: 'root',
+  password: 'Siddu12345',
+  database: 'schoolDB',
 });
 
 db.connect((err) => {

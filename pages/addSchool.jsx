@@ -32,7 +32,7 @@ export default function ShowSchools() {
     formData.append('image', data.image[0]);
 
     try {
-        const response = await axios.post('http://127.0.0.1:5000/api/addSchool', formData);
+      const response = await axios.post('http://localhost:5000/api/addSchool', formData);
       alert(response.data.message);
     } catch (error) {
       console.error(error);
