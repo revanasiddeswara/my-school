@@ -3,6 +3,7 @@ import axios from "axios";
 import "tailwindcss/tailwind.css";
 import Header from "./Header"; 
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Footer from "./footer";
 
 export default function ShowSchools() {
   const [schools, setSchools] = useState([]);
@@ -75,6 +76,7 @@ export default function ShowSchools() {
           </div>
         </div>
       </section>
+      <Footer/>
     </div>
   );
 }

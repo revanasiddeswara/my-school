@@ -172,3 +172,15 @@
     grid-template-columns: 1fr;
   }
 }
+.email-field{
+  border-radius: 0;
+    font-size: 14px;
+    box-shadow: none !important;
+    height: 48px;
+    background: 0 0;
+    border: 1px solid rgba(255, 255, 255, .2);
+    min-width: 280px;
+}
+.email-field:focus{
+  border-color: #01bacf !important;
+}
