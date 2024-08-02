@@ -60,13 +60,15 @@ const Header = () => {
         {/* Bottom Section - Logo and Navigation Links */}
         <div className="flex justify-between items-center py-2">
           <div className="flex items-center space-x-3">
-          <a href="/">  <Image
-              src="https://uniformapp.in/images/small_logo.png"
-              alt="Logo"
-              width={100}
-              height={50}
-              className="h-16"
-            />
+            <a href="/">
+              {" "}
+              <Image
+                src="https://uniformapp.in/images/small_logo.png"
+                alt="Logo"
+                width={100}
+                height={50}
+                className="h-16"
+              />
             </a>
             <div className="md:hidden">
               <button onClick={toggleMenu} className="text-2xl ml-16">
